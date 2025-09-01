@@ -3,7 +3,7 @@ import {get, post, put, del} from '../utils/request'
 import {ILoginParams} from '../types/api'
 
 const login = (params: ILoginParams) => {
-    return get('/login', params);
+    return post('/api/users/login', params);
 }
 
 
