@@ -3,7 +3,7 @@ import { message } from "antd";
 
 const instance = axios.create({
     baseURL: "https://m1.apifoxmock.com/m1/7036789-6756731-default",
-    timeout: 5000,
+    timeout: 10000,
     timeoutErrorMessage: "请求超时，请刷新重试！"
 });
 

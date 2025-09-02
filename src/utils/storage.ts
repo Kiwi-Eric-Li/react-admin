@@ -2,13 +2,13 @@ const getLocal = (key: string) => {
     return localStorage.get(key);
 }
 const setLocal = (key: string, value: string) => {
-    return localStorage.set(key, value);
+    localStorage.setItem(key, value);
 }
 const removeLocal = (key: string) => {
-    return localStorage.removeItem(key);
+    localStorage.removeItem(key);
 }
 const clearLocal = () => {
-    return localStorage.clear();
+    localStorage.clear();
 }
 
 export {getLocal, setLocal, removeLocal, clearLocal};
