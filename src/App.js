@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 import './App.css';
 
 import Login from './views/login'
+import Layout from './views/layout'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Login />
+      <Layout />
     </div>
   );
 }

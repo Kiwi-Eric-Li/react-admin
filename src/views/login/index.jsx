@@ -3,6 +3,7 @@ import { Button, Form, Input, message } from 'antd';
 
 import {login} from '../../api/index.ts'
 import {setLocal} from '../../utils/storage.ts'
+import styles from './index.module.less'
 
 const App = () => {
     const [userName, setUserName] = useState('');
@@ -26,24 +27,25 @@ const App = () => {
     }
 
     return (
-        <Form
-            name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-            style={{ maxWidth: 600 }}
-            initialValues={{ remember: true }}
-            autoComplete="off"
-        >
-            <Form.Item label="Username" name="username">
-                <Input onChange={(e) => {setUserName(e.target.value)}}/>
-            </Form.Item>
-            <Form.Item label="Password" name="password">
-                <Input.Password onChange={(e) => {setPassword(e.target.value)}}/>
-            </Form.Item>
-            <Form.Item label={null}>
-                <Button type="primary" loading={loading} onClick={handleSubmit}>Submit</Button>
-            </Form.Item>
-        </Form>
+        <div className={styles.login_box}>
+            <Form
+                name="basic"
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+                style={{ maxWidth: 600 }}
+                initialValues={{ remember: true }}
+                autoComplete="off">
+                <Form.Item label="Username" name="username">
+                    <Input onChange={(e) => {setUserName(e.target.value)}}/>
+                </Form.Item>
+                <Form.Item label="Password" name="password">
+                    <Input.Password onChange={(e) => {setPassword(e.target.value)}}/>
+                </Form.Item>
+                <Form.Item label={null}>
+                    <Button type="primary" loading={loading} onClick={handleSubmit}>Submit</Button>
+                </Form.Item>
+            </Form>
+        </div>
     )
 }
 
