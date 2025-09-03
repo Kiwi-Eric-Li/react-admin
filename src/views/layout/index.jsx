@@ -20,14 +20,7 @@ const App = () => {
   return (
     <Layout style={{'height': '100%'}}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <SideMenu />
-        <div className="demo-logo-vertical" />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          items={[]}
-        />
+        <SideMenu collapsed={collapsed}/>
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }}>
